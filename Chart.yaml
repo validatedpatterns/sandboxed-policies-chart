@@ -1,6 +1,9 @@
 apiVersion: v2
-description: A Helm chart to serve as the Validated Patterns Template
+description: A Helm chart to build and push polcies to support sandboxed containers into the spoke cluster of a validated pattern.
 keywords:
   - pattern
-name: vp-template
+  - sandboxed-containers
+  - confidential-computing
+  - confidential-containers
+name: sandboxed-policies
 version: 0.0.1
