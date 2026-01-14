@@ -1,6 +1,6 @@
 # sandboxed-policies
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square)
 
 A Helm chart to build and push polcies to support sandboxed containers into the spoke cluster of a validated pattern.
 
