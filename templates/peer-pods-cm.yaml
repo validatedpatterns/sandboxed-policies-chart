@@ -36,6 +36,9 @@ spec:
               AZURE_NSG_ID: '/subscriptions/{{ `{{ (fromJson (fromConfigMap "openshift-cloud-controller-manager" "cloud-conf" "cloud.conf" | toLiteral)).subscriptionId }}` }}/resourceGroups/{{ `{{ (fromJson (fromConfigMap "openshift-cloud-controller-manager" "cloud-conf" "cloud.conf" | toLiteral)).resourceGroup }}` }}/providers/Microsoft.Network/networkSecurityGroups/{{ `{{ (fromJson (fromConfigMap "openshift-cloud-controller-manager" "cloud-conf" "cloud.conf" | toLiteral)).securityGroupName }}` }}'
               DISABLECVM: "false"
               PROXY_TIMEOUT: "15m"
+              TAGS: '{{ .Values.global.coco.azure.tags }}'
+              PEERPODS_LIMIT_PER_NODE: "10"
+              ROOT_VOLUME_SIZE: '{{ .Values.global.coco.azure.rootVolumeSize }}'
               INITDATA: '{{ `{{ fromConfigMap "imperative" "initdata" "INITDATA" }}` }}'
 
 ---
