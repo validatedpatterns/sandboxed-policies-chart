@@ -1,3 +1,4 @@
+{{- if eq .Values.global.clusterPlatform "Azure" }}
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: Policy
@@ -72,3 +73,4 @@ spec:
     matchLabels:
       cloud: Azure
 ---
+{{- end }}
