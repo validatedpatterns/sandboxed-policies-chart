@@ -28,6 +28,9 @@
             VALIDATE_ALL_CODEBASE: true
             DEFAULT_BRANCH: main
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            # Dependabot and fork PRs have read-only tokens; report via the job result.
+            MULTI_STATUS: false
+            ENABLE_GITHUB_PULL_REQUEST_SUMMARY_COMMENT: false
             # These are the validation we disable atm
             # Temporarily
             VALIDATE_CHECKOV: false
