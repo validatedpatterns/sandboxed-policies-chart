@@ -41,7 +41,7 @@ spec:
               {{- end }}
               PROXY_TIMEOUT: "15m"
               TAGS: '{{ .Values.global.coco.azure.tags }}'
-              PEERPODS_LIMIT_PER_NODE: "10"
+              PEERPODS_LIMIT_PER_NODE: "{{ .Values.global.coco.azure.peerPodsLimitPerNode | default "10" }}"
               ROOT_VOLUME_SIZE: '{{ .Values.global.coco.azure.rootVolumeSize }}'
               INITDATA: '{{ `{{ fromConfigMap "imperative" "initdata" "INITDATA" }}` }}'
 

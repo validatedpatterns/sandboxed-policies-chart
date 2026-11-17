@@ -24,6 +24,7 @@ A small number of imperative jobs are also part of the coco pattern which are us
 | global.coco.azure.VMFlavours | string | `"Standard_DC2as_v5,Standard_DC4as_v5,Standard_DC8as_v5,Standard_DC16as_v5"` |  |
 | global.coco.azure.defaultVMFlavour | string | `"Standard_DC2as_v5"` |  |
 | global.coco.azure.rootVolumeSize | string | `"20"` |  |
+| global.coco.azure.peerPodsLimitPerNode | string | `"10"` |  |
 | global.coco.azure.tags | string | `"key1=value1,key2=value2"` |  |
 | global.coco.pullSecretNamespaces[0] | string | `"hello-openshift"` |  |
 | global.coco.pullSecretNamespaces[1] | string | `"kbs-access"` |  |
